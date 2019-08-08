@@ -1,0 +1,27 @@
+button.switch-button {
+  border: 3px outset;
+  font-size: 1.8em;
+  font-weight: 600;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-right: 10px;
+  height: 50px;
+}
+
+button.red {
+  color: yellow;
+  background-color: red;
+  border: 3px outset red;
+}
+
+button.facDisplay {
+  border: 0;
+  margin-left: 7px;
+  margin-right: 17px;
+  padding: 3px;
+  font-weight: bold;
+  font-size: 2.2em;
+  width: 600px;
+}

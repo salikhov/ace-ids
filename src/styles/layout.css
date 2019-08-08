@@ -1,0 +1,33 @@
+.left-col {
+  width: 180px;
+  height: 830px;
+  margin-right: 10px;
+  float: left;
+}
+
+.right-col {
+  width: 970px;
+  height: 830px;
+  float: left;
+}
+
+.container {
+  margin-top: -8px;
+  overflow: auto;
+  width: 1180px;
+}
+
+.container-bottom-right {
+  margin-top: 7px;
+  overflow: auto;
+  width: 970px;
+}
+
+.col-bottom-right {
+  width: 470px;
+  float: left;
+}
+
+.col-bottom-right:first-of-type {
+  margin-right: 30px;
+}

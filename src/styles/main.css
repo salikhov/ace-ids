@@ -1,0 +1,24 @@
+.wrapper {
+  margin: 0 auto;
+  height: 900px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  border: gray 0.5px solid;
+}
+
+body {
+  width: 1200px;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+  outline: none;
+}
+
+.red {
+  color: red;
+}

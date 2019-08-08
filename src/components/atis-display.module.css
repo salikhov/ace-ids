@@ -1,0 +1,8 @@
+.div {
+  font-size: 5.5em;
+  color: red;
+  padding-right: 10px;
+  font-weight: bold;
+  border: gray 1px solid;
+  text-align: right;
+}
