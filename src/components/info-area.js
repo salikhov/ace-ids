@@ -12,6 +12,7 @@ class InfoArea extends React.Component {
           fontSize: `1.5em`,
         }}
         contentEditable={true}
+        spellCheck={false}
       >
         {text}
       </div>

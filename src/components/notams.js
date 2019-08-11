@@ -12,7 +12,10 @@ class Notams extends React.Component {
           marginTop: `7px`,
         }}
       >
-        NOTAMS:&nbsp;&nbsp;&nbsp;&nbsp;<span contentEditable={true}>7/29</span>
+        NOTAMS:&nbsp;&nbsp;&nbsp;&nbsp;
+        <span contentEditable={true} spellCheck={false}>
+          7/29
+        </span>
       </div>
     )
   }

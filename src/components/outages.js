@@ -15,7 +15,11 @@ class Outages extends React.Component {
         >
           OUTAGES / CLOSURES
         </div>
-        <div contentEditable={true} style={{ fontSize: `1.2em` }}>
+        <div
+          contentEditable={true}
+          spellCheck={false}
+          style={{ fontSize: `1.2em` }}
+        >
           APRCH NIGHT STEP 5 OTS, CRANES
           <br />
           RAMP A 821-0422

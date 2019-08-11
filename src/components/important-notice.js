@@ -15,6 +15,7 @@ class ImportantNotice extends React.Component {
           lineHeight: `1.54`,
         }}
         contentEditable={true}
+        spellCheck={false}
       >
         CRANE OPERATING .1
       </div>

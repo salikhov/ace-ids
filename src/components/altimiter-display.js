@@ -11,6 +11,7 @@ class AltimiterDisplay extends React.Component {
           paddingLeft: `7px`,
         }}
         contentEditable={true}
+        spellCheck={false}
       >
         29.98
       </span>

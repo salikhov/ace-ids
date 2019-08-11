@@ -5,6 +5,7 @@ class RwyArea extends React.Component {
     return (
       <div
         contentEditable={true}
+        spellCheck={false}
         style={{
           color: `yellow`,
           fontSize: `4em`,
