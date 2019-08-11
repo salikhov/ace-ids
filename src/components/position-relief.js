@@ -16,7 +16,11 @@ class PositionRelief extends React.Component {
         >
           Position Relief Checklist
         </div>
-        <div contentEditable={true} spellCheck={false}>
+        <div
+          contentEditable={true}
+          spellCheck={false}
+          style={{ height: `200px`, overflowY: `auto` }}
+        >
           <br />
           A. Status Information Area.
           <br />
