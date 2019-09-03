@@ -1,7 +1,14 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 class AltimiterDisplay extends React.Component {
   render() {
+    const { metar } = this.props
+    const index = metar.search(/A[23][0-9][0-9][0-9]/)
+    const altimiter =
+      metar.substring(index + 1, index + 3) +
+      "." +
+      metar.substring(index + 3, index + 5)
     return (
       <span
         style={{
@@ -10,13 +17,15 @@ class AltimiterDisplay extends React.Component {
           textAlign: `center`,
           paddingLeft: `7px`,
         }}
-        contentEditable={true}
-        spellCheck={false}
       >
-        29.98
+        {altimiter}
       </span>
     )
   }
+}
+
+AltimiterDisplay.propTypes = {
+  metar: PropTypes.string,
 }
 
 export default AltimiterDisplay

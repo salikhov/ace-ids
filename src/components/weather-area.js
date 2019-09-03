@@ -1,35 +1,38 @@
 import React from "react"
-import axios from "axios"
+import PropTypes from "prop-types"
 
 class WeatherArea extends React.Component {
-  state = {
-    metar: "2156Z 30011KT 10SM FEW150 SCT200 29/15 A2988",
+  updateMetar(e) {
+    const { callback } = this.props
+    const newMetar = e.target.textContent
+    callback(newMetar)
   }
-  componentDidMount() {
-    this.fetchAndTrimMetar()
-  }
-  fetchAndTrimMetar() {
-    axios.get("http://metar.vatsim.net/metar.php?id=KSFO").then(response => {
-      const { data } = response
-      const noairport = data.substring(7)
-      const metar = noairport.substring(0, noairport.indexOf("RMK") - 1)
-      this.setState({ metar })
-    })
-  }
+
   render() {
-    const metar = this.state.metar
+    const { metar, atis } = this.props
     return (
-      <div
-        style={{ color: `red`, fontSize: `1.8em` }}
-        contentEditable={true}
-        spellCheck={false}
-      >
-        H {metar}
+      <div style={{ color: `red`, fontSize: `1.8em` }}>
+        <span>{atis}</span>{" "}
+        <span
+          contentEditable={true}
+          spellCheck={false}
+          onBlur={this.updateMetar.bind(this)}
+        >
+          {metar}
+        </span>
         <br />
-        CVFP L28/D01R BIRDS ***RWY 1L CLSD*** NO TRANSITIONS
+        <span spellCheck={false} contentEditable={true}>
+          CVFP L28/D01R BIRDS ***RWY 1L CLSD*** NO TRANSITIONS
+        </span>
       </div>
     )
   }
+}
+
+WeatherArea.propTypes = {
+  atis: PropTypes.string,
+  metar: PropTypes.string,
+  callback: PropTypes.func,
 }
 
 export default WeatherArea

@@ -12,16 +12,20 @@ import "../styles/main.css"
 import "../styles/layout.css"
 import "../styles/button.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, fetchDataCallback }) => {
   return (
-    <div class="wrapper">
-      <main>{children}</main>
+    <div>
+      <div class="wrapper">
+        <main>{children}</main>
+      </div>
+      <button onClick={fetchDataCallback}>Fetch Data</button>
     </div>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  fetchDataCallback: PropTypes.func,
 }
 
 export default Layout
